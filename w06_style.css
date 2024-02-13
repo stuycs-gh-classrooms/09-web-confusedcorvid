@@ -1,0 +1,27 @@
+
+P {
+Color: black;
+Font-size: 12px;
+Text-align: justify;
+}
+
+A {
+Color: blue;
+}
+
+Li {
+Font-size: 14 px;
+}
+
+
+Img {
+Width: 300px;
+Height: 250px;
+Border; 1 px solid black;
+}
+
+H1 {
+Color: purple;
+Font-size: 14px;
+Background-color: gainsboro;
+}
