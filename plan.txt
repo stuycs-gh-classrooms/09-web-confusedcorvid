@@ -1,0 +1,15 @@
+links: normal #a61900 hover #f02400 visited #9e3826
+background: #F0E9DF, back part #c4b7ab
+navigation: 
+    button highlight: #FD8B71  button: #A28981
+    button text highlight: #468690  button text: #0B5E71
+
+
+
+https://commons.wikimedia.org/wiki/File:House_sparrow_(Passer_domesticus)_male_carrying_nest_material_from_Coimbatore_district_JEG6839.jpg
+
+https://commons.wikimedia.org/wiki/File:House_Sparrow_(%E0%A4%98%E0%A4%B0_%E0%A4%AD%E0%A4%81%E0%A4%97%E0%A5%87%E0%A4%B0%E0%A4%BE)_1.jpg
+
+https://commons.wikimedia.org/wiki/File:Passer_domesticus_Maennchen_Tiergartenufer_Berlin.png
+
+https://en.wikipedia.org/wiki/File:Tame_house_sparrow.gif
