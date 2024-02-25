@@ -1,16 +1,104 @@
 h1 {
+font-family: Times New Roman;
+Font-size: 50px;
+Text-decoration: underline;
+Text-decoration-color: peru;
+Text-align: center;
 }
 
 h2 {
+font-family: Times New Roman;
 }
 
 a {
+color: red;
+}
+
+A:hover{
+color: orange;
+}
+ 
+Li A:hover {
+Font-color: red;
+Background-color: peru;
 }
 
 p {
+font-family: Helvetica;
+Font-color: black;
+Font-size: 20px;
+Display: inline;
+Clear: right;
+text-indent: 50px;
+line-height: 1.5;
+Margin: 10px;
 }
 
-li {
+.normal {
+font-family: Helvetica;
+Font-color: black;
+Font-size: 20px;
+line-height: 1.5;
 }
 
+.silly {
+list-style-type: none;
+Overflow: hidden;
+margin: 0;
+padding: 0;
+display: inline;
+}
 
+Nav {
+Margin-left: auto;
+Margin-right: auto;
+  padding: 10px;
+}
+
+.navi {
+float: left;
+Display: inline;
+Text-align: center;
+color: white;
+Background-color: saddlebrown;
+Padding: 8px;
+}
+
+.navi2 {
+float: left;
+Display: inline;
+Text-align: center;
+color: white;
+Background-color: chocolate;
+Padding: 8px;
+Width: 70px;
+Font-weight: bold;
+Border: black 1px;
+}
+
+.select {
+float: left;
+Display: inline;
+Text-align: center;
+Padding: 8px;
+color: black;
+Background-color: peru;
+}
+
+#rightimage {
+Display: inline;
+Margin-left: auto;
+Float: right;
+Width: 450px;
+Padding: 10px;
+Margin: 20px;
+}
+
+#leftimage {
+Display: inline;
+Margin-right: auto;
+Float: left;
+Width: 450px;
+Padding: 10px;
+Margin: 20px;
+}
