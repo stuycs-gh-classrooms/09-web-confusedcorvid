@@ -1,3 +1,7 @@
+body {
+background-color: antiquewhite;
+}
+
 h1 {
 font-family: Times New Roman;
 Font-size: 50px;
@@ -14,6 +18,11 @@ a {
 color: red;
 }
 
+img {
+border-style: ridge;
+border-color: red;
+}
+
 A:hover{
 color: orange;
 }
@@ -24,7 +33,7 @@ Background-color: peru;
 }
 
 p {
-font-family: Helvetica;
+font-family: Helvetica, Arial, sans-serif;
 Font-color: black;
 Font-size: 20px;
 Display: inline;
