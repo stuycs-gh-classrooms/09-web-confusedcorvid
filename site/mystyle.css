@@ -21,6 +21,7 @@ color: red;
 img {
 border-style: ridge;
 border-color: red;
+margin: 20px;
 }
 
 A:hover{
@@ -32,6 +33,12 @@ Font-color: red;
 Background-color: peru;
 }
 
+div {
+display: block;
+margin: 100px;
+}
+
+
 p {
 font-family: Helvetica, Arial, sans-serif;
 Font-color: black;
@@ -39,8 +46,8 @@ Font-size: 20px;
 Display: inline;
 Clear: right;
 text-indent: 50px;
-line-height: 1.5;
-Margin: 10px;
+line-height: 1.6;
+Margin: 20px;
 }
 
 .normal {
