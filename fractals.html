@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fractal Frenzy</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="fractals.css">
+</head>
+
+
+<body class="body">
+<h1>   Fractals   </h1>
+<h2>Koch + Mod</h2>
+<br>
+
+<img src="http://homer.stuy.edu/~lmercone60/koch.png">
+<p>
+This is the 'vanilla' Koch curve at depth 3 - not much to add on about it. It is a fractal formed by dividing a line into thirds, then creating an equilateral triangle from the central third and erasing the 'base' of the triangle.
+</p>
+
+<img src="http://homer.stuy.edu/~lmercone60/newkoch.png">
+<br>
+
+<p>
+This is a Koch curve with three modifications:
+<br>
+1) Instead of iterations of triangles, this version iterates squares.
+<br>
+2) The Koch curve has been turned into a Koch 'snowflake' - except it's a square. Squareflake.
+<br>
+3) The side length of the fractal shrinks as the depth increases.
+<pre>
+<code>
+def newkoch(t, depth, size):
+    if (depth == 1):
+        t.fd(size)
+    else:
+        t.fd(size)
+        newkoch(t, depth-1, size * 0.8)
+        t.lt(90)
+        newkoch(t, depth-1, size * 0.8)
+        t.rt(90)
+        newkoch(t, depth-1, size * 0.8)
+        t.rt(90)
+        newkoch(t, depth-1, size * 0.8)
+        t.lt(90)
+        t.fd(size)
+        newkoch(t, depth-1, size * 0.8)
+
+def newkoch_full (depth, size):
+    x = 0
+    while x < 4:
+        newkoch(t, depth, size)
+        t.rt (90)
+        x = x + 1
+
+</code>
+</pre>
+</p>
+<br>
+<h2>Sierpinski + Mod</h2>
+<br>
+
+<img src="http://homer.stuy.edu/~lmercone60/sierpinski.png">
+<p>
+This is the 'vanilla' Sierpinski triangle at depth 3. It consists of iterations of a triangle inverted inside another ad inifitum.
+</p>
+
+<img src="http://homer.stuy.edu/~lmercone60/newsierpinski.png">
+
+<br>
+
+<p>
+This is a Sierpinski triangle fractal at depth 3 with the following modifications:
+<br>
+1) The angles outside of the base case have been edited so it forms a right triangle in shape while retaining equilaterial base cases.
+<br>
+2) The color of the base case varies depending on the input depth.
+<pre>
+<code>
+def newsierpinski(t, depth, length):
+    color = ["blue", "teal", "cyan", "aqua", "blue", "teal", "cyan", "aqua","blue", "teal", "cyan", "aqua", "blue", "teal", "cyan", "aqua"]
+    if depth == 1:
+        t.pensize (depth * 0.6)
+        t.fillcolor (color[depth])
+        t.begin_fill()
+        t.lt(60)
+        t.fd(length)
+        t.rt(120)
+        t.fd(length)
+        t.rt(120)
+        t.fd(length)
+        t.rt(180)
+        t.end_fill()
+    else:
+        newsierpinski(t, depth - 1, length / 2)
+        t.fd (length / 2)
+        newsierpinski(t, depth - 1, length / 2)
+        t.fillcolor (color[depth + 1])
+        t.bk (length / 2)
+        t.lt (90)
+        t.fd (length / 2)
+        t.rt (90)
+        newsierpinski(t, depth - 1, length / 2)
+        t.fillcolor (color[depth])
+        t.lt (90)
+        t.bk (length / 2)
+        t.rt (90)
+        
+
+newsierpinski(t, 5, 300)
+</code>
+</pre>
+The pattern can be seen more clearly at higher depths:
+<img src="http://homer.stuy.edu/~lmercone60/newsierpinskidetail.png">
+</p>
+<br>
+<h2>Tree + Mod</h2>
+<br>
+
+<img src="http://homer.stuy.edu/~lmercone60/tree.png">
+<p>
+This is 'vanilla' tree fractal at depth 3. A tree fractal consists of a 'V' shape iterated on each arm of the 'Y' to the depth level.
+</p>
+
+<img src="http://homer.stuy.edu/~lmercone60/newtree.png">
+<br>
+
+<p>
+This is a tree fractal with the following modifications:
+<br>
+1) The size of each branch decreases as depth increases.
+<br>
+2) At the very ends of every depth 0 branch there is a stamped green turtle.
+<br>
+3) The angle size decreases as depth increases.
+<br>
+4) The fractal no longer has a 'Y' shape but rather a 'W' on top - three branches instead of 2.
+<pre>
+<code>
+def newtree (t, depth, length, angle, width):
+    t.pensize(width)
+    if depth == 0:
+        t.fd (length)
+        t.pencolor("green")
+        t.fillcolor ("green")
+        t.stamp()
+        t.fillcolor ("black")
+        t.pencolor("black")
+        t.bk (length)
+    else:
+        t.pencolor("black")
+        t.fd (length)
+        t.rt (angle / 3)
+        newtree (t, depth - 1, length - 5, angle - (.1 * angle), width -1)
+        t.lt ((angle / 3) * 2)
+        newtree (t, depth - 1, length - 5, angle - (.1 * angle), width -1)
+        t.rt (angle / 3)
+        newtree (t, depth - 1, length - 5, angle - (.1 * angle), width -1)
+        t.bk (length)
+ 
+newtree (t, 5, 60, 80, 5)
+</code>
+</pre>
+</p>
+<br>
+
+</body>
+</html>

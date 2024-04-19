@@ -1,0 +1,43 @@
+body {
+}
+
+p {
+font-family: Times New Roman;
+}
+
+h1 {
+font-family: Times New Roman;
+Font-size: 50px;
+Text-decoration: underline;
+Text-decoration-color: black;
+Text-align: center;
+}
+
+h2 {
+font-family: Times New Roman;
+Font-size: 30px;
+Text-decoration: underline;
+Text-decoration-color: red;
+Text-align: center;
+}
+
+
+img {
+border-style: ridge;
+border-color: red;
+margin: 20px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+
+#body {
+Display: inline;
+background-color: antiquewhite;
+Width: 450px;
+Padding: 10px;
+Margin: 20px;
+
+}
